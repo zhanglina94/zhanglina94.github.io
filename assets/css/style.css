@@ -1108,6 +1108,12 @@ section {
 /*--------------------------------------------------------------
 # Custom — Professional profile enhancements
 --------------------------------------------------------------*/
+/* Fallback: show content if AOS fails to load */
+body:not(.aos-init) [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 .hero-tagline {
   font-size: 18px;
   font-weight: 600;

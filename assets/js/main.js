@@ -154,6 +154,31 @@
   }
 
   /**
+   * Animation on scroll — init early so content is not stuck invisible
+   */
+  window.addEventListener('load', () => {
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    } else {
+      document.querySelectorAll('[data-aos]').forEach(el => {
+        el.classList.add('aos-animate');
+      });
+    }
+  });
+
+  /**
+   * Initiate Pure Counter
+   */
+  if (typeof PureCounter !== 'undefined') {
+    new PureCounter();
+  }
+
+  /**
    * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
@@ -191,9 +216,9 @@
   });
 
   /**
-   * Portfolio details slider
+   * Portfolio details slider (detail page only)
    */
-  if (select('.portfolio-details-slider')) {
+  if (typeof Swiper !== 'undefined' && select('.portfolio-details-slider')) {
     new Swiper('.portfolio-details-slider', {
       speed: 400,
       loop: true,
@@ -208,22 +233,5 @@
       }
     });
   }
-
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
-  });
-
-  /**
-   * Initiate Pure Counter 
-   */
-  new PureCounter();
 
 })()
