@@ -1,6 +1,6 @@
 # zhanglina94.github.io
 
-Personal portfolio of **ZHANG LINA (Elena)** — AI Researcher specializing in computer vision, multimodal learning, and speech synthesis.
+Personal portfolio of **ZHANG LINA (Elena)** — AI Engineer specializing in computer vision, multimodal learning, and speech synthesis.
 
 **Live site:** https://zhanglina94.github.io/
 

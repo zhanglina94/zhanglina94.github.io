@@ -1243,6 +1243,35 @@ body:not(.aos-init) [data-aos] {
   color: #37b3ed;
 }
 
+.portfolio-wrap--placeholder {
+  background: linear-gradient(135deg, #173b6c 0%, #149ddd 100%);
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-placeholder {
+  text-align: center;
+  color: #fff;
+  padding: 40px 24px;
+  pointer-events: none;
+}
+
+.portfolio-placeholder i {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.portfolio-placeholder span {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+
 .contact-cards {
   justify-content: center;
 }
