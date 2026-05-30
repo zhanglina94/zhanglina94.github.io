@@ -193,47 +193,18 @@
   /**
    * Portfolio details slider
    */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
-   * Testimonials slider
-   */
-  if (select('.testimonials-slider')) {
-    new Swiper('.testimonials-slider', {
-      speed: 600,
+  if (select('.portfolio-details-slider')) {
+    new Swiper('.portfolio-details-slider', {
+      speed: 400,
       loop: true,
       autoplay: {
         delay: 5000,
         disableOnInteraction: false
       },
-      slidesPerView: 'auto',
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 20
-        },
-
-        1200: {
-          slidesPerView: 3,
-          spaceBetween: 20
-        }
       }
     });
   }
